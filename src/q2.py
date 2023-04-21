@@ -3,6 +3,12 @@ import numpy as np
 from sklearn.datasets import load_diabetes
 import statsmodels.api as sm
 import matplotlib.pyplot as plt
+from sklearn.linear_model import LogisticRegression
+from sklearn.linear_model import LinearRegression
 from sklearn.feature_selection import SequentialFeatureSelector
 
-df = load_diabetes(as_frame=True)
+from q1 import df
+
+selector = SequentialFeatureSelector(estimator=LinearRegression())
+selector.fit(df)
+print(selector.get_support())
