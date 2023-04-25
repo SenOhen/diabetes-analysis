@@ -38,7 +38,12 @@ Compare the bar charts in Questions 1 & 2.
 Briefly discuss differences between the two charts and possible causes.
 Add a figure to prove your point.
 
-These two charts are different possibly because of the differing covariance between the features. For instance, sex has the smallest $R^2$ with the target, but it appears that sex acts as the best fifth feature for a five-input model (where the other features are bmi, s5, bp and s3), better than all the remaining features.
+Here is a side-by-side view of features, arranged by individual $R^2$ and features, arranged by order of sequential selection.
+![](figs/regular_v_sequentially_selected.png)
+
+These two charts are different possibly because of the differing covariance between the features. For instance, sex has the smallest $R^2$ with the target, but it appears that sex acts as the best fifth feature for a five-input model (whose first four features are bmi, s5, bp and s3), better than all the remaining features.
+
+On the other hand, s4 has the 4th best $R^2$ with the target, but it appears to be that s3, sex, s1 and s2 are all better choices for a four-, five-, six- or seven-input model when combined with bmi, s5 and bp.
 
 ## Question 4
 
