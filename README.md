@@ -22,6 +22,8 @@ bmi, s5, bp, s4, s3, s6, s1, age, s2, sex
 Here are the features ranked by $R^2$ values:
 ![](figs/features_by_r_squared.png)
 
+Run `make q1` to reproduce results.
+
 ## Question 2
 
 Rank the features according to the order that they're added in the [forward sequential feature selection](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SequentialFeatureSelector.html) algorithm. Use this ranking to reorder the bar chart in question 1.
@@ -31,6 +33,8 @@ bmi, s5, bp, s3, sex, s1, s2, s4, age, s6
 
 Here is the reordered bar chart, showing features as ordered by the Sequential Feature Selector:
 ![](figs/sfs_features_by_r_squared.png)
+
+Run `make q2` to reproduce results.
 
 ## Question 3
 
@@ -44,6 +48,8 @@ Here is a side-by-side view of features, arranged by individual $R^2$ and featur
 These two charts are different possibly because of the differing covariance between the features. For instance, sex has the smallest $R^2$ with the target, but it appears that sex acts as the best fifth feature for a five-input model (whose first four features are bmi, s5, bp and s3), better than all the remaining features.
 
 On the other hand, s4 has the 4th best $R^2$ with the target, but it appears to be that s3, sex, s1 and s2 are all better choices for a four-, five-, six- or seven-input model when combined with bmi, s5 and bp.
+
+Run `make q3` to reproduce results.
 
 ## Question 4
 
@@ -60,6 +66,8 @@ The error seems to decrease as the number of components used increases. Therefor
 Here is a figure showing cross-validation scores vs number of components.
 ![](figs/cv_v_n_components_using_PCR.png)
 
+Run `make q4` to reproduce results.
+
 ## Question 5
 
 The [lasso lars demo](https://scikit-learn.org/stable/auto_examples/linear_model/plot_lasso_lars.html) computes and plots the coefficients with lasso. Add a legend to the plot so that you can relate colors to feature names. Briefly compare the lasso ordering to your answers above.
@@ -71,3 +79,5 @@ It ranks the features (from best score to worst) in the following order:
 bmi, s5, bp, sex, s6, s1, s4, s2, age, s3.
 
 It seems like, as in all the other rankings, bmi, s5 and bp are the features with the best scores. However, lasso ranks sex much higher thanindividual $R^2$ ranks sex, and lasso also ranks s6 much higher than the sequential feature selector ranks s6.
+
+Run `make q5` to reproduce results.
